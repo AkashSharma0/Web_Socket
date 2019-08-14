@@ -1,0 +1,23 @@
+STEPS FOR SSL WEB SOCKET GENERATION WITH OPENSSL:
+
+1. Download openssl.
+
+2. Open terminal
+
+3. Generate Certificate and key(1024):
+
+   openssl req -x509 -nodes -days 365 -newkey rsa:1024 -keyout mycert.pem -out mycert.pem 
+
+4. Include the path of cerificate and key on the server file code.
+
+5. Link the code with codes file.
+
+   gcc -Wall -o -file ssl -file.c -L/usr -lssl -/crypto
+
+6. Run server
+
+   sudo ./file PORTNO.
+
+7. run client 
+
+   sudo ./file IP PORTNO.
